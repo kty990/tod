@@ -43,17 +43,4 @@ public class Topic extends Activity {
     public ArrayList<String> getTruths() {
         return (ArrayList<String>) this.truths;
     }
-
-    public Spinner generateVisual(Context ctx) {
-        /* Define the main part */
-        Spinner dropdown = new Spinner(ctx);
-
-        ArrayList<String> concat = new ArrayList<String>();
-        concat.addAll(this.dares);
-        concat.addAll(this.truths);
-
-        MyStringAdapter adapter = new MyStringAdapter(ctx,concat);
-
-        return dropdown;
-    }
 }
